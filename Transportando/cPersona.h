@@ -1,8 +1,10 @@
 #pragma once
-#include "cMediodeTransporte.h"
+#include <string>
+#include <iostream>
+using namespace std; 
 class cPersona
 {
-private: 
+protected: 
 	string nombre; 
 	int km; 
 	int cant_subte; 
