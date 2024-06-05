@@ -15,7 +15,16 @@ int main()
    cPersona* Persona1 = new cPersona("Morena", 3, 0); 
    cPersona* Persona2 = new cDiscapacitado("Facundo", 5, 0); 
    cMediodeTransporte* Subte1 = new cSubte("Subte", 'B');
-   (Cole1)[0]; 
+   //operator [] usa manejo de excepciones!!
+   try
+   {
+       (*Cole1)[0];
+   }
+   catch (const exception* e)
+   {
+       cout << e->what() << endl; 
+       delete e;
+   }
    *(Cole1) + Persona2;
    *(Cole1) - Persona2; 
    cout << *(Persona2) << endl; //si no le pongo el *: imprime la direccion de memoria!!
